@@ -102,7 +102,7 @@ window.addEventListener('load', () => {
 
 /* ========== Console Signature ========== */
 console.log(
-  '%c方意智 · AI 产品工程师',
+  '%c方逸之 · AI 产品工程师',
   'color:#667eea;font-size:18px;font-weight:bold;'
 );
 console.log(
