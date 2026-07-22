@@ -1,11 +1,9 @@
 """本地截图调试版 HTML：在 </body> 前加 query 强制显示所有 reveal"""
-import sys
 from pathlib import Path
 
 INDEX = Path(r"D:\Learning\AI\面试\ai-portfolio\index.html")
 html = INDEX.read_text(encoding="utf-8")
 
-# 注入一段截图调试代码（仅在 URL 含 ?screenshot=1 时激活）
 inject = """
 <script>
   // 截图调试：把 URL 加 ?screenshot=1 时强制显示所有 reveal
@@ -29,10 +27,9 @@ inject = """
 </script>
 """
 
-# 注入到 </body> 之前
 if "screenshot=1" not in html:
     new_html = html.replace("</body>", inject + "</body>", 1)
     INDEX.write_text(new_html, encoding="utf-8")
-    print("injected (run ?screenshot=1 to test)")
+    print("injected screenshot helper (visit ?screenshot=1 to use)")
 else:
     print("already injected")
