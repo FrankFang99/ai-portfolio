@@ -61,20 +61,24 @@
 
     <div class="projects-grid">
 
-      <!-- 项目 1: 招商银行 AI 智能客服 (Coming Soon) -->
-      <article class="project-card project-card-coming">
+      <!-- 项目 1: 招商银行 AI 智能客服 (v3.12.1 final) -->
+      <article class="project-card">
         <div class="project-icon" data-color="purple">🛡️</div>
-        <h3 class="project-title">AI 智能客服 - 招商银行<span class="project-status">Coming Soon</span></h3>
+        <h3 class="project-title">AI 智能客服 - 招商银行"小招"<span class="project-status status-live">v3.12.1 final</span></h3>
         <p class="project-tagline">
-          金融场景意图识别 + 红线召回系统。1500 条评测集 P0 召回 98.57% / P1 准确率 88.73%（历次最高），识别耗时从 10 小时降到 36 分钟。
+          金融场景意图识别 + 红线召回系统。9 轮迭代至 v3.12.1 final：对抗性识别 39%→95%（+56pp），P0 红线召回 97.91%，业务权重准确率 91.86%，多轮对话 66.7%（12 业务场景），端到端延迟 0.00ms。Python + FastAPI + LangChain + DeepSeek。
         </p>
         <div class="project-tech">
-          <span class="tech-chip">BERT</span>
+          <span class="tech-chip">FastAPI</span>
+          <span class="tech-chip">LangChain</span>
           <span class="tech-chip">意图识别</span>
           <span class="tech-chip">RAG</span>
           <span class="tech-chip">金融</span>
         </div>
-        <span class="project-link project-link-disabled">项目整理中 · 链接待补</span>
+        <a href="https://frankfang99.github.io/cmb-smart-customer-service/" target="_blank" rel="noopener" class="project-link">
+          体验 Live Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
       </article>
 
       <!-- 项目 2: AI 行业落地研究 -->
@@ -115,7 +119,26 @@
         </a>
       </article>
 
-      <!-- 项目 4: 巴菲特股东信 -->
+      <!-- 项目 4: 小传 - AI 传记助手 -->
+      <article class="project-card">
+        <div class="project-icon" data-color="orange">📖</div>
+        <h3 class="project-title">小传 · AI 传记助手<span class="project-status status-live">已部署</span></h3>
+        <p class="project-tagline">
+          为普通人写传记的 AI 应用。React + TypeScript + Vite 单页应用，让每个普通人都能用 AI 把人生经历整理成可阅读的传记。
+        </p>
+        <div class="project-tech">
+          <span class="tech-chip">React</span>
+          <span class="tech-chip">TypeScript</span>
+          <span class="tech-chip">Vite</span>
+          <span class="tech-chip">C 端应用</span>
+        </div>
+        <a href="https://frankfang99.github.io/xiaozhuan-biography-app/" target="_blank" rel="noopener" class="project-link">
+          访问站点
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </article>
+
+      <!-- 项目 5: 巴菲特股东信 -->
       <article class="project-card">
         <div class="project-icon" data-color="orange">📚</div>
         <h3 class="project-title">巴菲特股东信（中英对照）<span class="project-status status-live">已部署</span></h3>
@@ -134,7 +157,7 @@
         </a>
       </article>
 
-      <!-- 项目 5: 免费清空购物车 -->
+      <!-- 项目 6: 免费清空购物车 -->
       <article class="project-card">
         <div class="project-icon" data-color="pink">🛒</div>
         <h3 class="project-title">免费清空购物车<span class="project-status status-live">已部署</span></h3>
@@ -151,19 +174,6 @@
           访问站点
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
-      </article>
-
-      <!-- 项目 6: 占位 -->
-      <article class="project-card project-card-placeholder">
-        <div class="project-icon" data-color="gray">➕</div>
-        <h3 class="project-title">更多项目<span class="project-status">持续更新</span></h3>
-        <p class="project-tagline">
-          Agent 实验 / RAG 系统 / LLM 应用 —— 持续构建中。每个项目都体现 AI 落地的完整闭环：业务痛点 → 技术方案 → 量化评估 → 失败复盘。
-        </p>
-        <div class="project-tech">
-          <span class="tech-chip tech-chip-placeholder">Coming Soon</span>
-        </div>
-        <span class="project-link project-link-disabled">敬请期待</span>
       </article>
 
     </div>
@@ -183,7 +193,7 @@
         <div class="stat-label">P1 准确率峰值</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">5</div>
+        <div class="stat-number">6</div>
         <div class="stat-label">GitHub Pages 已部署</div>
       </div>
     </div>
@@ -204,7 +214,7 @@
       </p>
       <p>
         目前在 <strong>ai-landing-research</strong> 项目持续追踪 AI 行业落地（8 大行业方法论 + 50+ 真实案例 + 失败案例复盘），
-        同时在做 AI 智能客服系统 v3.10.1（金融场景意图识别 P0 召回 98.57%，P1 准确率 88.73%），
+        同时在做 AI 智能客服系统 v3.12.1 final（金融场景意图识别 P0 召回 97.91%，对抗性识别 95%，业务权重 91.86%），
         以及面向散户的 <strong>GGTI 股格测试</strong> + AI 散户投资课程。
       </p>
       <div class="about-highlights">
@@ -226,7 +236,7 @@
           <div class="highlight-icon">📚</div>
           <div>
             <div class="highlight-title">持续输出</div>
-            <div class="highlight-desc">5 个 GitHub Pages 站点 / 周报 / 案例库，方法论沉淀</div>
+            <div class="highlight-desc">6 个 GitHub Pages 站点 / 周报 / 案例库，方法论沉淀</div>
           </div>
         </div>
       </div>
